@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace SubblySharp
 {
@@ -21,5 +22,4 @@ namespace SubblySharp
         [JsonProperty("status")]
         public string[] Status { get; set; }
     }
-
 }

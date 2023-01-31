@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace SubblySharp.Dto
 {
@@ -33,6 +34,6 @@ namespace SubblySharp.Dto
         public long? Quantity { get; set; }
 
         [JsonProperty("product")]
-        public SubblyLineItemProduct? Product { get; set; }
+        public SubblyLineItemProduct Product { get; set; }
     }
 }

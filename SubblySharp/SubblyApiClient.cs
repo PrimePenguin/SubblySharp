@@ -1,5 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Net.Http;
+using Newtonsoft.Json;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SubblySharp
 {
