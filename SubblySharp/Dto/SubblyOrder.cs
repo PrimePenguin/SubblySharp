@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace SubblySharp.Dto
@@ -99,7 +100,7 @@ namespace SubblySharp.Dto
         public SubscriptionModel Subscription { get; set; }
 
         [JsonProperty("line_items")]
-        public SubblyLineItem[] LineItems { get; set; }
+        public List<SubblyLineItem> LineItems { get; set; }
 
         [JsonProperty("tags")]
         public OrderTagModel[] Tags { get; set; }
@@ -109,5 +110,89 @@ namespace SubblySharp.Dto
 
         [JsonProperty("shipping_info")]
         public ShippingInfo ShippingInfo { get; set; }
+    }
+
+    public class SubblyLineItem
+    {
+        [JsonProperty("id")]
+        public long? Id { get; set; }
+
+        [JsonProperty("order_id")]
+        public long OrderId { get; set; }
+
+        [JsonProperty("item_price")]
+        public string ItemPrice { get; set; }
+
+        [JsonProperty("item_name")]
+        public string ItemName { get; set; }
+
+        [JsonProperty("active")]
+        public long Active { get; set; }
+
+        [JsonProperty("origin")]
+        public object Origin { get; set; }
+
+        [JsonProperty("created_on")]
+        public DateTimeOffset? CreatedOn { get; set; }
+
+        [JsonProperty("updated_on")]
+        public DateTimeOffset? UpdatedOn { get; set; }
+
+        [JsonProperty("quantity")]
+        public long? Quantity { get; set; }
+
+        [JsonProperty("product")]
+        public SubblyLineItemProduct Product { get; set; }
+    }
+
+    public class SubblyLineItemProduct
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
+        [JsonProperty("parent_id")]
+        public long ParentId { get; set; }
+
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+        [JsonProperty("gift_card")]
+        public long GiftCard { get; set; }
+
+        [JsonProperty("price")]
+        public string Price { get; set; }
+
+        [JsonProperty("setup_fee")]
+        public string SetupFee { get; set; }
+
+        [JsonProperty("shipping_fee")]
+        public string ShippingFee { get; set; }
+
+        [JsonProperty("shipping_fee_intl")]
+        public string ShippingFeeIntl { get; set; }
+
+        [JsonProperty("funnel_id")]
+        public string FunnelId { get; set; }
+
+        [JsonProperty("created_on")]
+        public DateTimeOffset? CreatedOn { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("delivery_info")]
+        public object DeliveryInfo { get; set; }
+
+        [JsonProperty("slug")]
+        public string Slug { get; set; }
+
+        [JsonProperty("active")]
+        public long? Active { get; set; }
+
+        [JsonProperty("last_updated")]
+        public DateTimeOffset? LastUpdated { get; set; }
+
+        [JsonProperty("archived")]
+        public long? Archived { get; set; }
     }
 }

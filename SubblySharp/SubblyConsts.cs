@@ -1,6 +1,6 @@
 ﻿namespace SubblySharp
 {
-    public class SubblyConstants
+    public class SubblyConsts
     {
         public const string BaseUrl = "https://www.subbly.co/api/v1";
         public const int Limit = 250;

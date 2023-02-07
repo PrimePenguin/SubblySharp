@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace SubblySharp.Dto
 {
-    public partial class SubblyCustomerModel
+    public class SubblyCustomerModel
     {
         [JsonProperty("id")]
         public long? Id { get; set; }

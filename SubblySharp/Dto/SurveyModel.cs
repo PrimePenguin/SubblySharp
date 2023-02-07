@@ -2,7 +2,7 @@
 
 namespace SubblySharp.Dto
 {
-    public  class SurveyModel
+    public class SurveyModel
     {
         [JsonProperty("version")]
         public long? Version { get; set; }
@@ -14,13 +14,13 @@ namespace SubblySharp.Dto
         public Data Data { get; set; }
     }
 
-    public partial class Data
+    public class Data
     {
         [JsonProperty("questions")]
         public Question[] Questions { get; set; }
     }
 
-    public partial class Question
+    public class Question
     {
         [JsonProperty("id")]
         public long? Id { get; set; }
@@ -30,10 +30,9 @@ namespace SubblySharp.Dto
 
         [JsonProperty("name")]
         public string Name { get; set; }
-
     }
 
-    public partial class Answer
+    public class Answer
     {
         [JsonProperty("id")]
         public long? Id { get; set; }
@@ -47,6 +46,4 @@ namespace SubblySharp.Dto
         [JsonProperty("quantity", NullValueHandling = NullValueHandling.Ignore)]
         public long? Quantity { get; set; }
     }
-
-  
 }

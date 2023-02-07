@@ -3,7 +3,7 @@ using System;
 
 namespace SubblySharp
 {
-    public  class SubblyException
+    public class SubblyException
     {
         [JsonProperty("message")]
         public string Message { get; set; }
@@ -17,7 +17,7 @@ namespace SubblySharp
         }
     }
 
-    public partial class Errors
+    public class Errors
     {
         [JsonProperty("status")]
         public string[] Status { get; set; }

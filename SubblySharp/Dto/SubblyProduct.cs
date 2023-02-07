@@ -155,6 +155,7 @@ namespace SubblySharp.Dto
         [JsonProperty("urls", NullValueHandling = NullValueHandling.Ignore)]
         public Urls Urls { get; set; }
     }
+
     public  class Urls
     {
         [JsonProperty("add_to_cart")]
@@ -163,5 +164,4 @@ namespace SubblySharp.Dto
         [JsonProperty("checkout")]
         public Uri Checkout { get; set; }
     }
-
 }

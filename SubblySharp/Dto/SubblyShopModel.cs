@@ -11,7 +11,7 @@ namespace SubblySharp.Dto
         public CountryModel Country { get; set; }
     }
 
-    public partial class CountryModel
+    public class CountryModel
     {
         [JsonProperty("id")]
         public long? Id { get; set; }

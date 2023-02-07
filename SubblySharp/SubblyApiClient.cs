@@ -16,6 +16,7 @@ namespace SubblySharp
             BaseUri = baseUri;
             AccessToken = accessToken;
         }
+
         public async Task<T> ExecuteAsync<T>(HttpMethod method, string requestUrl, object data = null)
         {
             using (var client = new HttpClient())

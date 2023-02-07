@@ -16,7 +16,5 @@ namespace SubblySharp.Dto
 
         [JsonProperty("updated_on")]
         public DateTimeOffset? UpdatedOn { get; set; }
-
     }
-  
 }

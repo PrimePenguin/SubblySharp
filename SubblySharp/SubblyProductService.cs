@@ -3,7 +3,6 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using SubblySharp.Dto;
-using SubblySharp.Filters;
 
 namespace SubblySharp
 {
@@ -13,27 +12,25 @@ namespace SubblySharp
 
         public SubblyProductService(string accessToken)
         {
-            ApiClient = new SubblyApiClient(SubblyConstants.BaseUrl, accessToken);
+            ApiClient = new SubblyApiClient(SubblyConsts.BaseUrl, accessToken);
         }
 
         public async Task<List<SubblyProduct>> GetAllSubblyProducts(SubblyFilter filter)
         {
             var products = new List<SubblyProduct>();
-            var url = SubblyConstants.ProductsUrl;
-            filter.Page = 1;
-            filter.PerPage = SubblyConstants.Limit;
+
             while (true)
             {
-                var response = await ApiClient.ExecuteAsync<SubblyProducts>(HttpMethod.Get, url, filter);
-                products.AddRange(response.Data);
-                filter.Page++;
+                var response = await ApiClient.ExecuteAsync<SubblyProductsQuery>(HttpMethod.Get, SubblyConsts.ProductsUrl, filter);
+                products.AddRange(response.SubblyProducts);
 
-                if (products.Count % (SubblyConstants.Limit * 2) == 0) Thread.Sleep(3000);
-                if (response.Data.Length < SubblyConstants.Limit) break;
+                if (products.Count % (SubblyConsts.Limit * 2) == 0) Thread.Sleep(3000);
+                if (response.SubblyProducts.Count < SubblyConsts.Limit) break;
+
+                filter.Page++;
             }
 
             return products;
         }
-
     }
 }

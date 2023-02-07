@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace SubblySharp.Dto
 {
-    public partial class SubblyCustomerTag
+    public class SubblyCustomerTag
     {
         [JsonProperty("id")]
         public long? Id { get; set; }
@@ -21,7 +21,7 @@ namespace SubblySharp.Dto
         public CustomerTagPivot Pivot { get; set; }
     }
 
-    public partial class CustomerTagPivot
+    public class CustomerTagPivot
     {
         [JsonProperty("customer_id")]
         public long? CustomerId { get; set; }
@@ -29,5 +29,4 @@ namespace SubblySharp.Dto
         [JsonProperty("tag_id")]
         public long? TagId { get; set; }
     }
-
 }

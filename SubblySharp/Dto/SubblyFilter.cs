@@ -1,9 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace SubblySharp.Filters
-{
-    public class SubblyFilter 
+namespace SubblySharp.Dto
+{   
+    public class SubblyFilter : SubblyBaseFilter
     {
         [JsonProperty("status")]
         public string Status { get; set; }
@@ -19,15 +19,6 @@ namespace SubblySharp.Filters
 
         [JsonProperty("end_due_date")]
         public DateTimeOffset? EndDueDate { get; set; }
-
-        [JsonProperty("page")]
-        public int? Page { get; set; }
-
-        [JsonProperty("per_page")]
-        public int? PerPage { get; set; }
-
-        [JsonProperty("direction")]
-        public string Direction { get; set; }
 
         [JsonProperty("order_by")]
         public string OrderBy { get; set; }

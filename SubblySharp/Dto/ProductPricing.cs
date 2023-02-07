@@ -71,6 +71,7 @@ namespace SubblySharp.Dto
         [JsonProperty("stock_count")]
         public long? StockCount { get; set; }
     }
+
     public  class BillingFrequency
     {
         [JsonProperty("name")]

@@ -35,5 +35,4 @@ namespace SubblySharp.Dto
         [JsonProperty("original_url")] 
         public Uri OriginalUrl { get; set; }
     }
-
 }

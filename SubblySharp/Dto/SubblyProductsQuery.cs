@@ -1,14 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace SubblySharp.Dto
 {
-    public  class SubblyProducts
+    public  class SubblyProductsQuery
     {
         [JsonProperty("error")]
         public bool Error { get; set; }
 
         [JsonProperty("data")]
-        public SubblyProduct[] Data { get; set; }
+        public List<SubblyProduct> SubblyProducts { get; set; }
 
         [JsonProperty("message")]
         public string Message { get; set; }

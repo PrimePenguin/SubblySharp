@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace SubblySharp.Dto
 {
-    public class SubblyOrders
-    {
+    public class SubblyOrdersQuery
+    {   
         [JsonProperty("data")]
-        public SubblyOrder[] Data { get; set; }
+        public List<SubblyOrder> SubblyOrders { get; set; }
 
         [JsonProperty("current_page")]
         public long CurrentPage { get; set; }
@@ -21,6 +22,5 @@ namespace SubblySharp.Dto
 
         [JsonProperty("per_page")]
         public long PerPage { get; set; }
-
     }
 }
