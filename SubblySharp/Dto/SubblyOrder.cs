@@ -106,7 +106,7 @@ namespace SubblySharp.Dto
         public OrderTagModel[] Tags { get; set; }
 
         [JsonProperty("shipping_items")]
-        public object[] ShippingItems { get; set; }
+        public ShippingItem[] ShippingItems { get; set; }
 
         [JsonProperty("shipping_info")]
         public ShippingInfo ShippingInfo { get; set; }
