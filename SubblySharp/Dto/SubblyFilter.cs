@@ -22,6 +22,5 @@ namespace SubblySharp.Dto
 
         [JsonProperty("order_by")]
         public string OrderBy { get; set; }
-
     }
 }
