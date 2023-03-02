@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Net;
 
 namespace SubblySharp
 {
-    public class SubblyException
+    public class SubblyException : Exception
     {
         [JsonProperty("message")]
         public string Message { get; set; }
@@ -11,10 +12,9 @@ namespace SubblySharp
         [JsonProperty("errors")]
         public Errors Errors { get; set; }
 
-        public static explicit operator SystemException(SubblyException v)
-        {
-            throw new NotImplementedException();
-        }
+        public string ApiResponse { get; set; }
+
+        public HttpStatusCode StatusCode { get; set; }
     }
 
     public class Errors

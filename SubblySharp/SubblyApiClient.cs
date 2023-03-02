@@ -38,9 +38,18 @@ namespace SubblySharp
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    var exception = JsonConvert.DeserializeObject<SubblyException>(result);
-                    exception.Message = result;
-                    throw (SystemException) exception;
+                    var exception = new SubblyException();
+                    try
+                    {
+                        exception = JsonConvert.DeserializeObject<SubblyException>(result);
+                    }
+                    catch (Exception e)
+                    {
+                        // Ignore
+                    }
+                    exception.ApiResponse = result;
+                    exception.StatusCode = response.StatusCode;
+                    throw exception;
                 }
 
                 var responseObj = JsonConvert.DeserializeObject<T>(result);
