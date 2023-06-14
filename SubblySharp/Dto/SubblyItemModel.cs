@@ -27,10 +27,10 @@ namespace SubblySharp.Dto
         public string PhotoUrl { get; set; }
 
         [JsonProperty("buy_price")]
-        public string BuyPrice { get; set; }
+        public decimal? BuyPrice { get; set; }
 
         [JsonProperty("sell_price")]
-        public string SellPrice { get; set; }
+        public decimal? SellPrice { get; set; }
 
         [JsonProperty("stock_count")]
         public long? StockCount { get; set; }

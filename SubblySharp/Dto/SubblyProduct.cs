@@ -24,7 +24,7 @@ namespace SubblySharp.Dto
         public string Category { get; set; }
 
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
 
         [JsonProperty("setup_fee")]
         public string SetupFee { get; set; }
@@ -126,7 +126,7 @@ namespace SubblySharp.Dto
         public string TaxProductCode { get; set; }
 
         [JsonProperty("trial_price")]
-        public string TrialPrice { get; set; }
+        public decimal? TrialPrice { get; set; }
 
         [JsonProperty("trial_length_days")]
         public long? TrialLengthDays { get; set; }

@@ -20,7 +20,7 @@ namespace SubblySharp.Dto
         public string Description { get; set; }
 
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
 
         [JsonProperty("stock_count")]
         public long? StockCount { get; set; }

@@ -121,7 +121,7 @@ namespace SubblySharp.Dto
         public string OrderId { get; set; }
 
         [JsonProperty("item_price")]
-        public string ItemPrice { get; set; }
+        public decimal? ItemPrice { get; set; }
 
         [JsonProperty("item_name")]
         public string ItemName { get; set; }
@@ -160,7 +160,7 @@ namespace SubblySharp.Dto
         public long GiftCard { get; set; }
 
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
 
         [JsonProperty("setup_fee")]
         public string SetupFee { get; set; }

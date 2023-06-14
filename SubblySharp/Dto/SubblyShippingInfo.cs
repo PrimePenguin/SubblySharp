@@ -20,7 +20,7 @@ namespace SubblySharp.Dto
         public long? Id { get; set; }
 
         [JsonProperty("rule_id")]
-        public long? RuleId { get; set; }
+        public string RuleId { get; set; }
 
         [JsonProperty("rule_name")]
         public string RuleName { get; set; }
@@ -29,10 +29,10 @@ namespace SubblySharp.Dto
         public string Name { get; set; }
 
         [JsonProperty("duration")]
-        public long? Duration { get; set; }
+        public string Duration { get; set; }
 
         [JsonProperty("price")]
-        public long? Price { get; set; }
+        public decimal? Price { get; set; }
 
         [JsonProperty("option_type")]
         public string OptionType { get; set; }
