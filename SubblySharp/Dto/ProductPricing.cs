@@ -45,7 +45,7 @@ namespace SubblySharp.Dto
         public string TrialPrice { get; set; }
 
         [JsonProperty("stripe_plan_id")]
-        public long? StripePlanId { get; set; }
+        public string StripePlanId { get; set; }
 
         [JsonProperty("charge_immediately")]
         public long? ChargeImmediately { get; set; }
