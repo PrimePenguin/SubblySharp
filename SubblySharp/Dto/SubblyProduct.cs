@@ -18,10 +18,10 @@ namespace SubblySharp.Dto
         public string Sku { get; set; }
 
         [JsonProperty("shop")]
-        public long? Shop { get; set; }
+        public string Shop { get; set; }
 
         [JsonProperty("category")]
-        public long? Category { get; set; }
+        public string Category { get; set; }
 
         [JsonProperty("price")]
         public string Price { get; set; }
@@ -72,7 +72,7 @@ namespace SubblySharp.Dto
         public DateTimeOffset? LastUpdated { get; set; }
 
         [JsonProperty("stripe_plan_id")]
-        public long? StripePlanId { get; set; }
+        public string StripePlanId { get; set; }
 
         [JsonProperty("pre_order_end_at")]
         public DateTimeOffset? PreOrderEndAt { get; set; }

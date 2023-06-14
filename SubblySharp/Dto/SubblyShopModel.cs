@@ -35,6 +35,6 @@ namespace SubblySharp.Dto
         public string CurrencyHtml { get; set; }
 
         [JsonProperty("status")]
-        public long? Status { get; set; }
+        public string Status { get; set; }
     }
 }

@@ -7,19 +7,19 @@ namespace SubblySharp.Dto
     public class SubblyOrder
     {
         [JsonProperty("id")]
-        public long? Id { get; set; }
+        public long Id { get; set; }
 
         [JsonProperty("internal_id")]
         public string InternalId { get; set; }
 
         [JsonProperty("customer_order_number")]
-        public long? CustomerOrderNumber { get; set; }
+        public string CustomerOrderNumber { get; set; }
 
         [JsonProperty("subscription_order_number")]
         public string SubscriptionOrderNumber { get; set; }
 
         [JsonProperty("status")]
-        public long? Status { get; set; }
+        public string Status { get; set; }
 
         [JsonProperty("status_name")]
         public string StatusName { get; set; }
@@ -34,10 +34,10 @@ namespace SubblySharp.Dto
         public DateTimeOffset? DueDate { get; set; }
 
         [JsonProperty("subtotal")]
-        public long? Subtotal { get; set; }
+        public decimal? Subtotal { get; set; }
 
         [JsonProperty("total")]
-        public long? Total { get; set; }
+        public decimal? Total { get; set; }
 
         [JsonProperty("carrier")]
         public string Carrier { get; set; }
@@ -64,10 +64,10 @@ namespace SubblySharp.Dto
         public string GiftMessage { get; set; }
 
         [JsonProperty("tax_amount")]
-        public long? TaxAmount { get; set; }
+        public decimal? TaxAmount { get; set; }
 
         [JsonProperty("tax_rate")]
-        public long? TaxRate { get; set; }
+        public decimal? TaxRate { get; set; }
 
         [JsonProperty("disputed")]
         public long? Disputed { get; set; }
@@ -76,7 +76,7 @@ namespace SubblySharp.Dto
         public long? Refunded { get; set; }
 
         [JsonProperty("refunded_amount")]
-        public long? RefundedAmount { get; set; }
+        public decimal? RefundedAmount { get; set; }
 
         [JsonProperty("exchange_rate")]
         public long? ExchangeRate { get; set; }
@@ -118,7 +118,7 @@ namespace SubblySharp.Dto
         public long? Id { get; set; }
 
         [JsonProperty("order_id")]
-        public long OrderId { get; set; }
+        public string OrderId { get; set; }
 
         [JsonProperty("item_price")]
         public string ItemPrice { get; set; }
@@ -151,7 +151,7 @@ namespace SubblySharp.Dto
         public long Id { get; set; }
 
         [JsonProperty("parent_id")]
-        public long ParentId { get; set; }
+        public string ParentId { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
