@@ -17,9 +17,6 @@ namespace SubblySharp.Dto
         [JsonProperty("status_name")]
         public string StatusName { get; set; }
 
-        [JsonProperty("survey")]
-        public SurveyModel Survey { get; set; }
-
         [JsonProperty("created_on")]
         public DateTimeOffset? CreatedOn { get; set; }
 
