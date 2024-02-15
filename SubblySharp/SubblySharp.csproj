@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>SubblySharp</RootNamespace>
-    <Version>0.0.13</Version>
+    <Version>0.0.14</Version>
   </PropertyGroup>
   <PropertyGroup>
     <Description>SubblySharp is a C# and .NET library that helps developers easily manage Subbly stores.</Description>

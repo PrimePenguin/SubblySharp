@@ -36,5 +36,8 @@ namespace SubblySharp.Dto
 
         [JsonProperty("default")]
         public long? Default { get; set; }
+
+        [JsonProperty("region_code")]
+        public string RegionCode { get; set; }
     }
 }
