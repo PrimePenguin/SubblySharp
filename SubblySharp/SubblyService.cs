@@ -22,7 +22,7 @@ namespace SubblySharp
                 var response = await ApiClient.ExecuteAsync<SubblyProductsQuery>(HttpMethod.Get, SubblyConsts.ProductsUrl, filter);
                 products.AddRange(response.SubblyProducts);
 
-                if (response.SubblyProducts.Count < SubblyConsts.Limit) break;
+                if (response.SubblyProducts.Count != SubblyConsts.Limit) break;
                 filter.Page++;
             }
             return products;
@@ -36,7 +36,7 @@ namespace SubblySharp
                 var response = await ApiClient.ExecuteAsync<SubblyOrdersQuery>(HttpMethod.Get, SubblyConsts.OrdersUrl, filter);
                 orders.AddRange(response.SubblyOrders);
 
-                if (response.SubblyOrders.Count < SubblyConsts.Limit) break;
+                if (response.SubblyOrders.Count != SubblyConsts.Limit) break;
                 filter.Page++;
             }
             return orders;
